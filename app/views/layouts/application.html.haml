@@ -1,15 +1,27 @@
 !!! 5
 %html{ :lang => "en-US", "xml:lang" => "en-US", :xmlns => "http://www.w3.org/1999/xhtml" }
-	%head
-		%meta{ 'http-equiv' => "content-type", :content => "text/html; charset=utf-8" }
-		%meta{ :name => "Author", :content => "Order Frozen Seafood, LLC" }
-		%meta{ :name => "viewport", :content => "width=1024" }
-		%title= 'Order Frozen Seafood: ' + @title ||= "Thanks for Visiting!"
-		%meta{ :name => "Keywords", :content => @keywords ||= "Order Frozen Seafood" }
-		%meta{ :name => "Description", :content => @description ||= "Order Premium Frozen Seafood to your door daily"}
-		= stylesheet_link_tag 'frontend/all.css'
-		= javascript_include_tag :defaults
-		= csrf_meta_tag
-	%body
-		#container
-			= yield
+  %head
+    %meta{ 'http-equiv' => "content-type", :content => "text/html; charset=utf-8" }
+    %meta{ :name => "Author", :content => "Order Frozen Seafood, LLC" }
+    %meta{ :name => "viewport", :content => "width=1024" }
+    %title= 'Order Frozen Seafood: ' + @title ||= "Thanks for Visiting!"
+    %meta{ :name => "Keywords", :content => @keywords ||= "Order Frozen Seafood" }
+    %meta{ :name => "Description", :content => @description ||= "Order Premium Frozen Seafood to your door daily"}
+    = stylesheet_link_tag 'frontend/all.css'
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+  %body
+    #container
+      = yield
+  
+  %script{ :type => "text/javascript"}
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+  %script{ :type => "text/javascript"}
+    try {
+    var pageTracker = _gat._getTracker("UA-2566289-9");
+    pageTracker._setDomainName("none");
+    pageTracker._setAllowLinker(true);
+    pageTracker._trackPageview();
+    } catch(err) {}

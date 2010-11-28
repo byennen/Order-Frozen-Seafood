@@ -47,8 +47,7 @@ html, body {
 body {
   font-size: 95%;
   font-family: "Lucida Grande", "Bitstream Vera Sans", Helvetica, Verdana, Arial, sans-serif;
-  background: -moz-linear-gradient(top, #f2f2f2 0%, white 100%);
-  background: url("../../../images/bg.png") repeat; }
+  background: #c6d2d1; }
 
 a {
   color: red;
@@ -120,8 +119,11 @@ table {
   border-collapse: collapse; }
 
 #container {
-  margin: 0 auto;
-  width: 700px; }
+  margin: 50px auto 150px auto;
+  width: 700px;
+  background: white;
+  padding: 10px;
+  border: 8px solid #3b5985; }
 
 #header {
   font-size: 90%;
